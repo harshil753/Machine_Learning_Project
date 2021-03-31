@@ -1292,7 +1292,7 @@ clf = CV_logreg.best_estimator_
 cv = StratifiedKFold(2, shuffle=True, random_state=35)
 
 score_orig, perm_scores_orig, pvalue_orig = permutation_test_score(
-    clf, X_test, y_test, scoring="accuracy", cv=cv, n_permutations=1000)
+    clf, X_test, y_test, scoring="accuracy", cv=cv, n_permutations=1000,n_jobs=None)
 ```
 
     c:\users\harsh\desktop\env\lib\site-packages\sklearn\linear_model\_logistic.py:1537: UserWarning: 'n_jobs' > 1 does not have any effect when 'solver' is set to 'liblinear'. Got 'n_jobs' = 4.
